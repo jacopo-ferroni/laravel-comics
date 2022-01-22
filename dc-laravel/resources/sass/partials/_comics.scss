@@ -1,0 +1,9 @@
+.container {
+    max-width: $max-width;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    .card {
+        width: calc(100% / 2);
+    }
+}
