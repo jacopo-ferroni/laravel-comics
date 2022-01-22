@@ -13,6 +13,7 @@
 
     <main>
         @yield('content')
+        @yield('comic')
     </main>
 
     @include('partials.footer')

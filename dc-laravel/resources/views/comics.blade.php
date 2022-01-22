@@ -7,13 +7,15 @@
         <div class="container">
             <h1>COMICS POSTER</h1>
             <div class="poster">
-                @foreach ($comics as $comic)
-                <div class="card">
-                    <div class="box">
-                        <img src="{{$comic['thumb']}}" alt="">
+                @foreach ($comics as $index => $comic)
+                <a href="{{route('comic', ['id' => $index])}}">
+                    <div class="card">
+                        <div class="box">
+                            <img src="{{$comic['thumb']}}" alt="">
+                        </div>
+                        <p>{{$comic['series']}}</p>
                     </div>
-                    <p>{{$comic['title']}}</p>
-                </div>
+                </a>
                 @endforeach
             </div>
         </div>

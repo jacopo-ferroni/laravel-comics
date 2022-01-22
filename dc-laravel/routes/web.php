@@ -1,5 +1,6 @@
 <?php
 
+use Hamcrest\Type\IsNumeric;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,10 +14,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+/* HOME PAGE ROUTE */
 Route::get('/', function () {
     return view('home');
 })->name('home');
 
+/* COMICS PAGE ROUTE */
 Route::get('/comics', function () {
 
     $comics = config('comics-poster');
@@ -24,10 +27,28 @@ Route::get('/comics', function () {
     return view('comics', ['comics' => $comics]);
 })->name('comics');
 
+/* CONTACT PAGE ROUTE */
 Route::get('/contact', function () {
     return view('contact');
 })->name('contact');
 
+/* PRIVACY PAGE ROUTE */
 Route::get('privacy', function () {
     return view('privacy');
 })->name('privacy');
+
+/* ROUTE FOR ID */
+Route::get('/comic/{id}', function($id) {
+
+    $comics = config('comics-poster');
+
+    if (is_numeric($id) && $id >= 0 && $id < count($comics)) {
+        $comic = $comics[$id];
+    }
+    else {
+        abort(404);
+    }
+
+    return view('comic', ['comic' => $comic]);
+
+})->name('comic');

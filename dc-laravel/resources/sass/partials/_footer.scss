@@ -1,0 +1,30 @@
+footer {
+    background-color: #303030;
+    border-top: 20px solid #0182f9;
+    color: white;
+    .container {
+        max-width: 1200px;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 0;
+        .btn {
+            cursor: pointer;
+            border: 2px solid #0182f9;
+            padding: 10px 20px;
+        }
+        .social {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            p {
+                color: #0182f9;
+                margin-right: 5px;
+            }
+            img {
+                margin: 0 5px;
+            }
+        }
+    }
+}

@@ -2,7 +2,7 @@
 
 //dc comics poster information
 
-return [
+return 
     [
         [
             "title" => "Action Comics #1000: The Deluxe Edition",
@@ -215,5 +215,4 @@ return [
                 "Joëlle Jones"
             ],
         ],
-    ]
-];
+    ];

@@ -1,0 +1,12 @@
+.comic {
+    .imgbgr {
+        width: 100%;
+        height: 200px;
+        border-bottom: 20px solid #0182f9;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
